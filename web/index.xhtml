@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Apartment Search</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>Please select your option for Bedroom</h3> 
+            <h:selectOneMenu id="bedroom" required="true" value="#{apartmentSearching.bedRoom}">
+                <f:selectItems value="#{apartmentSearching.bedRoomOptions}"/>
+            </h:selectOneMenu>
+            <br></br>
+            <h3>Please select your option for Bathroom</h3>
+            <h:selectOneMenu id="bathroom" required="true" value="#{apartmentSearching.bathRoom}">
+                <f:selectItems value="#{apartmentSearching.bathRoomOptions}"/>
+            </h:selectOneMenu>
+            <p>
+                <h:commandButton id="submit" value="Submit" action="#{apartmentSearching.search()}"/>
+            </p>
+        </h:form>
+    </h:body>
+</html>
+
